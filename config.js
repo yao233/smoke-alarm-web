@@ -18,12 +18,12 @@ const GIZWITS_CONFIG = {
     apiVersion: 'app'
 };
 
-// 百度千帆AI配置（去 https://console.bce.baidu.com/qianfan/ais/console/application 申请）
+// 百度千帆AI配置（去 https://qianfan.baidu.com 控制台申请）
 const AI_CONFIG = {
     // 百度千帆 API Key（需要你去申请）
-    apiKey: '',
+    apiKey: 'bce-v3/ALTAK-WKrDMdJmCrabONJ1k9cy2/60d34969e2218c8064a7ef65339a98b114fd7a97',
     // 百度千帆 Secret Key（需要你去申请）
-    secretKey: '',
+    secretKey: '667aba77ce464f778699aa83e2cb74da',
     // AI模型名称
     model: 'ernie-speed-128k',
     // AI系统提示词
