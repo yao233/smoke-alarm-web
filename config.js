@@ -21,7 +21,7 @@ const GIZWITS_CONFIG = {
 // DeepSeek AI配置（去 https://platform.deepseek.com 申请）
 const AI_CONFIG = {
     // DeepSeek API Key（以 sk- 开头，在平台复制）
-    apiKey: '',
+    apiKey: 'sk-c4e6c760f17140899b0b6a52372b79fd',
     // AI模型名称（deepseek-chat 或 deepseek-reasoner）
     model: 'deepseek-chat',
     // AI系统提示词
