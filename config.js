@@ -18,14 +18,12 @@ const GIZWITS_CONFIG = {
     apiVersion: 'app'
 };
 
-// 百度千帆AI配置（去 https://qianfan.baidu.com 控制台申请）
+// DeepSeek AI配置（去 https://platform.deepseek.com 申请）
 const AI_CONFIG = {
-    // 百度千帆 API Key（需要你去申请）
-    apiKey: 'bce-v3/ALTAK-WKrDMdJmCrabONJ1k9cy2/60d34969e2218c8064a7ef65339a98b114fd7a97',
-    // 百度千帆 Secret Key（需要你去申请）
-    secretKey: '667aba77ce464f778699aa83e2cb74da',
-    // AI模型名称
-    model: 'ernie-speed-128k',
+    // DeepSeek API Key（以 sk- 开头，在平台复制）
+    apiKey: '',
+    // AI模型名称（deepseek-chat 或 deepseek-reasoner）
+    model: 'deepseek-chat',
     // AI系统提示词
     systemPrompt: `你是一个智能烟雾报警系统助手。你的职责是：
 1. 分析用户提供的温度和烟雾浓度数据

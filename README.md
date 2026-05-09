@@ -1,15 +1,17 @@
 # 烟雾报警系统 - AI智能监控面板
 
 > 将此项目部署到 GitHub Pages，即可通过浏览器访问烟雾报警系统的实时数据和AI分析功能。
+> 
+> **AI 服务**：使用 DeepSeek API（申请简单、价格便宜）
 
 ## 文件说明
 
 | 文件 | 作用 |
 |------|------|
 | `index.html` | 主页面（数据展示 + AI对话 + 远程控制） |
-| `config.js` | 配置文件（需要填写API Key） |
+| `config.js` | 配置文件（需要填写机智云凭据 + DeepSeek API Key） |
 | `gizwits-api.js` | 机智云API接口封装 |
-| `ai-chat.js` | 百度千帆AI接口封装 |
+| `ai-chat.js` | DeepSeek AI接口封装 |
 | `style.css` | 页面样式 |
 
 ## 部署到 GitHub Pages（5分钟）
@@ -55,19 +57,21 @@ git push -u origin main
 6. 等待1-2分钟，页面会显示访问链接：
    `https://你的用户名.github.io/smoke-alarm-web/`
 
-### 第4步：配置AI（可选）
+### 第4步：配置 AI（DeepSeek）
 
-1. 访问 https://console.bce.baidu.com/qianfan/ais/console/application
-2. 创建应用，获取 **API Key** 和 **Secret Key**
-3. 编辑 `config.js`，填入你的Key：
+1. 打开 https://platform.deepseek.com ，注册并登录
+2. 点击左侧 **API Keys** → **Create new secret key**
+3. 复制生成的 Key（以 `sk-` 开头）
+4. 编辑 `config.js`，填入你的 Key：
 ```javascript
 const AI_CONFIG = {
-    apiKey: '你的API Key',
-    secretKey: '你的Secret Key',
+    apiKey: 'sk-你的Key',
     ...
 };
 ```
-4. 重新上传 `config.js` 到 GitHub
+5. 重新上传 `config.js` 到 GitHub
+
+> DeepSeek 新用户有免费额度，用完需充值（非常便宜，约 ¥0.001/千tokens）
 
 ## 功能
 
