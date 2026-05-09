@@ -13,7 +13,7 @@ class GizwitsAPI {
     }
 
     /**
-     * 获取访问令牌
+     * 获取访问令牌（匿名登录）
      */
     async getToken() {
         // 检查token是否有效
@@ -21,15 +21,15 @@ class GizwitsAPI {
             return this.token;
         }
 
-        const url = `${this.config.apiBase}/${this.config.apiVersion}/login`;
+        // 匿名登录接口：/app/bind/guest
+        const url = `${this.config.apiBase}/${this.config.apiVersion}/bind/guest`;
 
         try {
             const response = await fetch(url, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    product_key: this.config.productKey,
-                    product_secret: this.config.productSecret
+                    product_key: this.config.productKey
                 })
             });
 
